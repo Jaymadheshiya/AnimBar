@@ -1,0 +1,65 @@
+#container {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: black;
+    border: 3px solid yellow;
+}
+
+#bars {
+    position: absolute;
+    bottom: 30px; 
+    left: 0;
+    width: 100%;
+    height: calc(100% - 30px); 
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 100px;
+    margin: 0 2px;
+    animation-name: pumpUpDown;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+}
+
+@keyframes pumpUpDown {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.7);
+    }
+}
+
+#buttons {
+    text-align: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#buttons button {
+    margin: 0 5px;
+}
+
+#startBtn{
+    background-color: green;
+}
+
+#resetBtn{
+    background-color: violet;
+}
+
+#stopBtn{
+    background-color: red;
+}
